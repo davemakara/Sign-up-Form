@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <header>
+        <h1>Sign Up Form</h1>
+      </header>
+      <main>
+        <div class="page1">
+          <ul class="steps">
+            <li class="step stepName">
+              <p>Name</p>
+              <div class="insideStep insideStep1 done-green">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p>Contact</p>
+              <div class="insideStep insideStep2 done-green">
+                <p>2</p>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p>Birth</p>
+              <div class="insideStep insideStep2 done-green">
+                <p>3</p>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p>Submit</p>
+              <div class="insideStep insideStep2 done-green">
+                <p>4</p>
+              </div>
+            </li>
+          </ul>
+          <h2 class="formInfo">Contact Info:</h2>
+          <form action="" class="form" id="user-form">
+            <label for="first-name" class="inputLabel">First Name</label>
+            <input type="text" name="lastName" class="input" id="first-name" />
+            <label for="last-name" class="inputLabel">Last Name</label>
+            <input type="text" name="lastName" class="input" id="last-name" />
+          </form>
+          <div class="butttons">
+            <button type="button" class="button previousBtn">PREVIOUS</button>
+            <button type="submit" class="button nextBtn">NEXT</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
