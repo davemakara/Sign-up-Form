@@ -23,48 +23,248 @@
   <body>
     <div class="mainContainer">
       <header>
-        <h1>Sign Up Form</h1>
+        <h1 id="main-heading">Sign Up Form</h1>
       </header>
       <main>
-        <div class="page1">
+        <div class="page1 " id="page-1">
           <ul class="steps">
             <li class="step stepName">
-              <p>Name</p>
-              <div class="insideStep insideStep1 done-green">
-                <i class="fa-solid fa-check"></i>
+              <p class="stepP">Name</p>
+              <div class="insideStep">
+                <p class="insideStepP">1</p>
+                <!-- <i class="fa-solid fa-check"></i> -->
               </div>
             </li>
             <li class="step stepContact">
-              <p>Contact</p>
-              <div class="insideStep insideStep2 done-green">
-                <p>2</p>
+              <p class="stepP">Contact</p>
+              <div class="insideStep insideStep2">
+                <p class="insideStepP">2</p>
               </div>
             </li>
             <li class="step stepContact">
-              <p>Birth</p>
-              <div class="insideStep insideStep2 done-green">
-                <p>3</p>
+              <p class="stepP">Birth</p>
+              <div class="insideStep insideStep2">
+                <p class="insideStepP">3</p>
               </div>
             </li>
             <li class="step stepContact">
-              <p>Submit</p>
-              <div class="insideStep insideStep2 done-green">
-                <p>4</p>
+              <p class="stepP">Submit</p>
+              <div class="insideStep insideStep2">
+                <p class="insideStepP">4</p>
               </div>
             </li>
           </ul>
-          <h2 class="formInfo">Contact Info:</h2>
-          <form action="" class="form" id="user-form">
+          <h2 class="formInfo">Name:</h2>
+          <form action="" class="form" id="user-form1">
             <label for="first-name" class="inputLabel">First Name</label>
             <input type="text" name="lastName" class="input" id="first-name" />
             <label for="last-name" class="inputLabel">Last Name</label>
             <input type="text" name="lastName" class="input" id="last-name" />
           </form>
           <div class="butttons">
-            <button type="button" class="button previousBtn">PREVIOUS</button>
-            <button type="submit" class="button nextBtn">NEXT</button>
+            <button
+              type="button"
+              class="button previousBtn"
+              id="previous-btn-page1"
+            >
+              PREVIOUS
+            </button>
+            <button type="submit" class="button nextBtn" id="next-btn-page1">
+              NEXT
+            </button>
           </div>
         </div>
+        <div class="page2 hidden" id="page-2">
+          <ul class="steps">
+            <li class="step stepName">
+              <p class="stepP done-green">Name</p>
+              <div class="insideStep insideStepGreen">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP">Contact</p>
+              <div class="insideStep insideStep2">
+                <p>2</p>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP">Birth</p>
+              <div class="insideStep insideStep2">
+                <p>3</p>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP">Submit</p>
+              <div class="insideStep insideStep2">
+                <p>4</p>
+              </div>
+            </li>
+          </ul>
+          <h2 class="formInfo">Contact Info:</h2>
+          <form action="" class="form" id="user-form2">
+            <label for="email-address" class="inputLabel">Email Address</label>
+            <input type="email" name="email" class="input" id="email-address" />
+            <label for="phone-number" class="inputLabel">Phone Number</label>
+            <input
+              type="number"
+              name="number"
+              class="input"
+              id="phone-number"
+            />
+          </form>
+          <div class="butttons">
+            <button
+              type="button"
+              class="button previousBtn"
+              id="previous-btn-page2"
+            >
+              PREVIOUS
+            </button>
+            <button type="submit" class="button nextBtn" id="next-btn-page2">
+              NEXT
+            </button>
+          </div>
+        </div>
+        <div class="page3 hidden" id="page-3">
+          <ul class="steps">
+            <li class="step stepName">
+              <p class="stepP done-green">Name</p>
+              <div class="insideStep insideStepGreen">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP done-green">Contact</p>
+              <div class="insideStep insideStepGreen">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP">Birth</p>
+              <div class="insideStep insideStep2">
+                <p>3</p>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP">Submit</p>
+              <div class="insideStep insideStep2">
+                <p>4</p>
+              </div>
+            </li>
+          </ul>
+          <h2 class="formInfo">Birth Date:</h2>
+          <form action="" class="form" id="user-form3">
+            <label for="input-date" class="inputLabel">Birth Date</label>
+            <input type="date" name="date" class="input" id="input-date" />
+            <h4 class="gender">Gender</h4>
+            <input type="radio" name="gender" id="gender-male" value="male" />
+            <label for="gender-male" class="genderLabel">Male</label>
+            <input
+              type="radio"
+              name="gender"
+              id="gender-female"
+              value="female"
+            />
+            <label for="gender-female">Female</label>
+          </form>
+          <div class="butttons">
+            <button
+              type="button"
+              class="button previousBtn"
+              id="previous-btn-page3"
+            >
+              PREVIOUS
+            </button>
+            <button type="submit" class="button nextBtn" id="next-btn-page3">
+              NEXT
+            </button>
+          </div>
+        </div>
+        <div class="page4 hidden" id="page-4">
+          <ul class="steps">
+            <li class="step stepName">
+              <p class="stepP done-green">Name</p>
+              <div class="insideStep insideStepGreen">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP done-green">Contact</p>
+              <div class="insideStep insideStepGreen">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP done-green"">Birth</p>
+              <div class="insideStep insideStepGreen">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </li>
+            <li class="step stepContact">
+              <p class="stepP">Submit</p>
+              <div class="insideStep insideStep2">
+                <p>4</p>
+              </div>
+            </li>
+          </ul>
+          <h2 class="formInfo">Create Password:</h2>
+          <form action="" class="form" id="user-form4">
+            <label for="input-password" class="inputLabel">Password</label>
+            <input type="password" name="password" class="input" id="input-password" required/>
+            <label for="verify-password" class="inputLabel">Confirm Password</label>
+            <input type="password" name="password" class="input" id="verify-password" required/>
+
+            <input type="checkbox" name="check" id="check-box">
+            
+            <label for="check-box" class="custom-label">I agree to the <a href="#">terms and conditions</a>.</label>
+           
+          </form>
+          <div class="butttons">
+            <button
+              type="button"
+              class="button previousBtn"
+              id="previous-btn-page4"
+            >
+              PREVIOUS
+            </button>
+            <button type="submit" class="button nextBtn" id="next-btn-page4">
+              SUBMIT
+            </button>
+          </div>
+        </div>
+        <div class="page5 hidden" id="page-5">
+            <!-- <ul class="steps">
+              <li class="step stepName">
+                <p class="stepP done-green">Name</p>
+                <div class="insideStep insideStepGreen">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </li>
+              <li class="step stepContact">
+                <p class="stepP done-green">Contact</p>
+                <div class="insideStep insideStepGreen">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </li>
+              <li class="step stepContact">
+                <p class="stepP done-green"">Birth</p>
+                <div class="insideStep insideStepGreen">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </li>
+              <li class="step stepContact">
+                <p class="stepP">Submit</p>
+                <div class="insideStep insideStepGreen">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+              </li>
+            </ul> -->
+            
+              <h1 class="registered">You have been registered.</h1>
+<h2 class="thankYou">Thank you!</h2>
+            
+          </div>
       </main>
     </div>
   </body>
