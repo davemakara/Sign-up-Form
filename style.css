@@ -106,6 +106,16 @@ header {
 .input:focus {
   border: 2px solid #555;
 }
+
+.errorMessage {
+  color: red;
+  margin: -8px 0 10px;
+}
+
+.error-gender {
+  color: red;
+  margin: 0 0 5px;
+}
 .gender {
   padding: 5px 0px;
 }

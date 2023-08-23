@@ -26,7 +26,7 @@
         <h1 id="main-heading">Sign Up Form</h1>
       </header>
       <main>
-        <div class="page1 " id="page-1">
+        <div class="page1" id="page-1">
           <ul class="steps">
             <li class="step stepName">
               <p class="stepP">Name</p>
@@ -57,9 +57,13 @@
           <h2 class="formInfo">Name:</h2>
           <form action="" class="form" id="user-form1">
             <label for="first-name" class="inputLabel">First Name</label>
-            <input type="text" name="lastName" class="input" id="first-name" />
+            <input type="text" name="firstName" class="input" id="first-name" />
+            <p class="errorMessage errorEmpty hidden" id="error-empty-first-name">Please enter your first name</p>
+            <p class="errorMessage error-invalid hidden" id="error-invalid-first-name">Please enter a valid first name</p>
             <label for="last-name" class="inputLabel">Last Name</label>
             <input type="text" name="lastName" class="input" id="last-name" />
+            <p class="errorMessage error-empty hidden" id="error-empty-last-name">Please enter your last name</p>
+            <p class="errorMessage error-invalid hidden" id="error-invalid-last-name">Please enter a valid last name</p>
           </form>
           <div class="butttons">
             <button
@@ -79,25 +83,25 @@
             <li class="step stepName">
               <p class="stepP done-green">Name</p>
               <div class="insideStep insideStepGreen">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check insideStepP"></i>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP">Contact</p>
               <div class="insideStep insideStep2">
-                <p>2</p>
+                <p class="insideStepP">2</p>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP">Birth</p>
               <div class="insideStep insideStep2">
-                <p>3</p>
+                <p class="insideStepP">3</p>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP">Submit</p>
               <div class="insideStep insideStep2">
-                <p>4</p>
+                <p class="insideStepP">4</p>
               </div>
             </li>
           </ul>
@@ -105,6 +109,8 @@
           <form action="" class="form" id="user-form2">
             <label for="email-address" class="inputLabel">Email Address</label>
             <input type="email" name="email" class="input" id="email-address" />
+            <p class="errorMessage error-empty hidden" id="empty-email">Please enter your email address</p>
+            <p class="errorMessage error-invalid hidden" id="invalid-email">Please enter a valid email address</p>
             <label for="phone-number" class="inputLabel">Phone Number</label>
             <input
               type="number"
@@ -112,6 +118,8 @@
               class="input"
               id="phone-number"
             />
+            <p class="errorMessage error-empty hidden" id="empty-phone">Please enter your phone number</p>
+            
           </form>
           <div class="butttons">
             <button
@@ -131,25 +139,25 @@
             <li class="step stepName">
               <p class="stepP done-green">Name</p>
               <div class="insideStep insideStepGreen">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check insideStepP"></i>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP done-green">Contact</p>
               <div class="insideStep insideStepGreen">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check insideStepP"></i>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP">Birth</p>
               <div class="insideStep insideStep2">
-                <p>3</p>
+                <p class="insideStepP">3</p>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP">Submit</p>
               <div class="insideStep insideStep2">
-                <p>4</p>
+                <p class="insideStepP">4</p>
               </div>
             </li>
           </ul>
@@ -157,6 +165,8 @@
           <form action="" class="form" id="user-form3">
             <label for="input-date" class="inputLabel">Birth Date</label>
             <input type="date" name="date" class="input" id="input-date" />
+            <p class="errorMessage error-empty hidden" id="empty-date">Please enter your birth date</p>
+            
             <h4 class="gender">Gender</h4>
             <input type="radio" name="gender" id="gender-male" value="male" />
             <label for="gender-male" class="genderLabel">Male</label>
@@ -167,6 +177,8 @@
               value="female"
             />
             <label for="gender-female">Female</label>
+            <p class=" error-empty error-gender hidden" id="empty-gender">Please select your gender</p>
+            
           </form>
           <div class="butttons">
             <button
@@ -186,25 +198,25 @@
             <li class="step stepName">
               <p class="stepP done-green">Name</p>
               <div class="insideStep insideStepGreen">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check insideStepP"></i>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP done-green">Contact</p>
               <div class="insideStep insideStepGreen">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check insideStepP"></i>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP done-green"">Birth</p>
               <div class="insideStep insideStepGreen">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check insideStepP"></i>
               </div>
             </li>
             <li class="step stepContact">
               <p class="stepP">Submit</p>
               <div class="insideStep insideStep2">
-                <p>4</p>
+                <p class="insideStepP">4</p>
               </div>
             </li>
           </ul>
@@ -212,12 +224,17 @@
           <form action="" class="form" id="user-form4">
             <label for="input-password" class="inputLabel">Password</label>
             <input type="password" name="password" class="input" id="input-password" required/>
+            <p class="errorMessage error-empty hidden" id="empty-password">Please enter your password</p>
+            <p class="errorMessage error-invalid hidden" id="invalid-password">Password must be at least 8 characters</p>
             <label for="verify-password" class="inputLabel">Confirm Password</label>
             <input type="password" name="password" class="input" id="verify-password" required/>
+            <p class="errorMessage error-empty hidden" id="empty-confirm-pass">Please confirm your password</p>
+            <p class="errorMessage error-invalid hidden" id="invalid-confirm-pass">Passwords do not match</p>
 
             <input type="checkbox" name="check" id="check-box">
             
             <label for="check-box" class="custom-label">I agree to the <a href="#">terms and conditions</a>.</label>
+            <p class="error-gender error-empty hidden" id="error-checkbox">Please accept the terms and conditions</p>
            
           </form>
           <div class="butttons">
