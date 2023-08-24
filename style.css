@@ -4,7 +4,7 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: all 0.3s ease-in-out;
 }
 
@@ -14,8 +14,9 @@ body {
   min-height: 100vh;
   align-items: center;
   padding: 32px 20px;
-  /* background: linear-gradient(45deg, #1692f5, #2f2f2f); */
-  background: linear-gradient(45deg, #42275a, #734b6d);
+  background: linear-gradient(45deg, #141e30, #243b55);
+  /* background: linear-gradient(45deg, #42275a, #734b6d); */
+  /* background: linear-gradient(45deg, #434343, black); */
 }
 
 header {
@@ -26,9 +27,10 @@ header {
 .mainContainer {
   max-width: 400px;
   width: 100%;
-  padding: 40px 32px 50px;
+  padding: 30px 32px 40px;
   background-color: #fff;
   border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .done-green {
@@ -54,7 +56,7 @@ header {
 }
 
 .stepP {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   font-weight: 600;
   font-size: 16px;
   /* letter-spacing: 1px; */
@@ -81,7 +83,7 @@ header {
 }
 
 .formInfo {
-  padding: 15px 0 5px;
+  padding: 18px 0 7px;
 }
 
 .form {
@@ -96,8 +98,8 @@ header {
 
 .input {
   width: 100%;
-  font-size: 18px;
-  padding: 7px 15px;
+  font-size: 16px;
+  padding: 8px 15px;
   margin: 5px 0 15px;
   /* border-radius: 7px; */
   outline: none;
@@ -108,14 +110,21 @@ header {
 }
 
 .errorMessage {
-  color: red;
+  color: #ff0000;
   margin: -8px 0 10px;
+  font-size: 14px;
 }
 
 .error-gender {
   color: red;
   margin: 0 0 5px;
+  font-size: 14px;
 }
+
+.error-border {
+  border: 1px solid red;
+}
+
 .gender {
   padding: 5px 0px;
 }
@@ -146,15 +155,29 @@ header {
   background-color: #90969a;
 }
 
+.button:hover {
+  background-color: #232328;
+  cursor: pointer;
+}
+
 .registered {
   text-align: center;
   padding: 40px 0;
+  font-size: 40px;
+  color: green;
 }
 
 .thankYou {
   text-align: center;
+  padding: 10px 0 20px;
 }
 
 .hidden {
   display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .stepP {
+    font-size: 18px;
+  }
 }

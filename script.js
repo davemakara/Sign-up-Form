@@ -44,17 +44,33 @@ const errorEmptyCheckBox = document.getElementById("error-checkbox");
 const previousBtnPage4 = document.getElementById("previous-btn-page4");
 const nextBtnPage4 = document.getElementById("next-btn-page4");
 
+const errorBorder = (el) => {
+  el.classList.add("error-border");
+};
+
+const noErrorBorder = (el) => {
+  el.classList.remove("error-border");
+};
+
 const validatePage1 = () => {
   if (inputFirstName.value === "" && inputLastName.value !== "") {
+    errorBorder(inputFirstName);
+    noErrorBorder(inputLastName);
     errorEmptyFirstName.classList.remove("hidden");
     errorEmptyLastName.classList.add("hidden");
   } else if (inputFirstName.value !== "" && inputLastName.value === "") {
+    errorBorder(inputLastName);
+    noErrorBorder(inputFirstName);
     errorEmptyFirstName.classList.add("hidden");
     errorEmptyLastName.classList.remove("hidden");
   } else if (inputFirstName.value === "" && inputLastName.value === "") {
+    errorBorder(inputFirstName);
+    errorBorder(inputLastName);
     errorEmptyFirstName.classList.remove("hidden");
     errorEmptyLastName.classList.remove("hidden");
   } else {
+    noErrorBorder(inputFirstName);
+    noErrorBorder(inputLastName);
     errorEmptyFirstName.classList.add("hidden");
     errorEmptyLastName.classList.add("hidden");
 
@@ -65,18 +81,23 @@ const validatePage1 = () => {
 
 const validatePage2 = () => {
   if (inputEmail.value === "") {
+    errorBorder(inputEmail);
     errorEmptyEmail.classList.remove("hidden");
   } else if (inputEmail.value !== "" && !inputEmail.value.includes("@")) {
+    errorBorder(inputEmail);
     errorEmptyEmail.classList.add("hidden");
     errorInvEmail.classList.remove("hidden");
   } else if (inputEmail.value !== "" && inputEmail.value.includes("@")) {
+    noErrorBorder(inputEmail);
     errorEmptyEmail.classList.add("hidden");
     errorInvEmail.classList.add("hidden");
   }
 
   if (inputPhone.value === "") {
+    errorBorder(inputPhone);
     errorEmptyPhone.classList.remove("hidden");
   } else {
+    noErrorBorder(inputPhone);
     errorEmptyPhone.classList.add("hidden");
   }
 
@@ -85,6 +106,8 @@ const validatePage2 = () => {
     inputEmail.value.includes("@") &&
     inputPhone.value !== ""
   ) {
+    noErrorBorder(inputEmail);
+    noErrorBorder(inputPhone);
     errorEmptyEmail.classList.add("hidden");
     errorInvEmail.classList.add("hidden");
     errorEmptyPhone.classList.add("hidden");
@@ -95,8 +118,10 @@ const validatePage2 = () => {
 
 const validatePage3 = () => {
   if (inputDate.value === "") {
+    errorBorder(inputDate);
     errorEmptyDate.classList.remove("hidden");
   } else {
+    noErrorBorder(inputDate);
     errorEmptyDate.classList.add("hidden");
   }
 
@@ -110,6 +135,7 @@ const validatePage3 = () => {
     (inputDate.value !== "" && inputGenderMale.checked) ||
     inputGenderFemale.checked
   ) {
+    noErrorBorder(inputDate);
     errorEmptyDate.classList.add("hidden");
     errorEmptyGender.classList.add("hidden");
     page3.classList.add("hidden");
@@ -119,20 +145,25 @@ const validatePage3 = () => {
 
 const validatePage4 = () => {
   if (inputPassword.value === "") {
+    errorBorder(inputPassword);
     errorEmptyPassword.classList.remove("hidden");
   }
 
-  if (inputPassword.value === "" && inputConfirmPassword === "") {
+  if (inputPassword.value === "" && inputConfirmPassword.value === "") {
+    errorBorder(inputPassword);
+    errorBorder(inputConfirmPassword);
     errorEmptyPassword.classList.remove("hidden");
     errorEmptyConfirmPass.classList.remove("hidden");
   }
 
   if (inputPassword.value !== "" && inputPassword.value.length < 8) {
+    errorBorder(inputPassword);
     errorEmptyPassword.classList.add("hidden");
     errorInvalidPassword.classList.remove("hidden");
   }
 
   if (inputConfirmPassword === "" && inputPassword !== "") {
+    errorBorder(inputConfirmPassword);
     errorEmptyConfirmPass.classList.remove("hidden");
   }
 
@@ -141,6 +172,8 @@ const validatePage4 = () => {
     inputPassword.value.length >= 8 &&
     inputConfirmPassword.value === ""
   ) {
+    errorBorder(inputConfirmPassword);
+    noErrorBorder(inputPassword);
     errorEmptyPassword.classList.add("hidden");
     errorInvalidPassword.classList.add("hidden");
     errorInvConfirmPass.classList.add("hidden");
@@ -153,6 +186,8 @@ const validatePage4 = () => {
     inputConfirmPassword.value !== "" &&
     inputConfirmPassword.value !== inputPassword.value
   ) {
+    noErrorBorder(inputPassword);
+    errorBorder(inputConfirmPassword);
     errorEmptyPassword.classList.add("hidden");
     errorInvalidPassword.classList.add("hidden");
     errorEmptyConfirmPass.classList.add("hidden");
@@ -165,6 +200,8 @@ const validatePage4 = () => {
     inputConfirmPassword.value !== "" &&
     inputConfirmPassword.value === inputPassword.value
   ) {
+    noErrorBorder(inputPassword);
+    noErrorBorder(inputConfirmPassword);
     errorEmptyPassword.classList.add("hidden");
     errorInvalidPassword.classList.add("hidden");
     errorEmptyConfirmPass.classList.add("hidden");
@@ -227,4 +264,5 @@ nextBtnPage4.addEventListener("click", (e) => {
   e.preventDefault();
 
   validatePage4();
+  mainHeading.style.display = "none";
 });
